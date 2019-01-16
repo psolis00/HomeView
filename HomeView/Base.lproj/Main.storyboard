@@ -18,27 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2847" translatesAutoresizingMaskIntoConstraints="NO" id="lsa-Za-Rrh">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of the Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOX-8s-J9D">
                                 <rect key="frame" x="100" y="642" width="226.5" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5Z-RU-EJ3">
+                                <rect key="frame" x="100" y="552" width="445" height="90"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="75"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL8-W5-oMA">
                                 <rect key="frame" x="100" y="678" width="66" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5Z-RU-EJ3">
-                                <rect key="frame" x="100" y="570" width="358.5" height="72"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lsa-Za-Rrh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7ko-LA-EjJ"/>
+                            <constraint firstAttribute="bottom" secondItem="lsa-Za-Rrh" secondAttribute="bottom" id="DRX-Ff-SDp"/>
+                            <constraint firstItem="lsa-Za-Rrh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KBU-d5-5q4"/>
+                            <constraint firstItem="lsa-Za-Rrh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MN5-q3-P0m"/>
                             <constraint firstItem="gOX-8s-J9D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="TAg-c9-leK"/>
                             <constraint firstItem="y5Z-RU-EJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="VGV-fr-spA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gL8-W5-oMA" secondAttribute="bottom" constant="100" id="fi4-ew-UJU"/>
@@ -59,4 +66,7 @@
             <point key="canvasLocation" x="134.67336683417085" y="133.81294964028777"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_2847" width="2576" height="1932"/>
+    </resources>
 </document>
