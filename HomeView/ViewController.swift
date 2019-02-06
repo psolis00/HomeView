@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var dotwLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var hiddenSwitch = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,5 +42,14 @@ class ViewController: UIViewController {
         dotwLabel.text = dowt.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]
     }
 
+    var hideLabels = true
+    @IBAction func openMenu(_ sender: UIButton) {
+        if hideLabels{
+            dateLabel.isHidden = true
+            timeLabel.isHidden = true
+            dotwLabel.isHidden = true
+            hideLabels = false
+        }
+    }
 }
 

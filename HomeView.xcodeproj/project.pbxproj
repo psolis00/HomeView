@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD357D95220264EF00C8AD68 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD357D94220264EF00C8AD68 /* MenuViewController.swift */; };
 		CDDAF56B21EFE91100026D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAF56A21EFE91100026D89 /* AppDelegate.swift */; };
 		CDDAF56D21EFE91100026D89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAF56C21EFE91100026D89 /* ViewController.swift */; };
 		CDDAF57021EFE91100026D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDDAF56E21EFE91100026D89 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD357D94220264EF00C8AD68 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CDDAF56721EFE91100026D89 /* HomeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAF56A21EFE91100026D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDDAF56C21EFE91100026D89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				CDDAF56A21EFE91100026D89 /* AppDelegate.swift */,
 				CDDAF56C21EFE91100026D89 /* ViewController.swift */,
 				CDDAF56E21EFE91100026D89 /* Main.storyboard */,
+				CD357D94220264EF00C8AD68 /* MenuViewController.swift */,
 				CDDAF57121EFE91300026D89 /* Assets.xcassets */,
 				CDDAF57321EFE91300026D89 /* LaunchScreen.storyboard */,
 				CDDAF57621EFE91300026D89 /* Info.plist */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDAF56D21EFE91100026D89 /* ViewController.swift in Sources */,
+				CD357D95220264EF00C8AD68 /* MenuViewController.swift in Sources */,
 				CDDAF56B21EFE91100026D89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
