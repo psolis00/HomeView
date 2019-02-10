@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.currentDate), userInfo: nil, repeats: true)
+   
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
 
     @objc func currentDate(){
         let time = DateFormatter()
-        let dowt = DateFormatter()
+        let dotw = DateFormatter()
         let date = DateFormatter()
         
         time.timeStyle = .short
@@ -39,17 +40,19 @@ class ViewController: UIViewController {
         
         timeLabel.text = time.string(from: Date())
         dateLabel.text = date.string(from: Date())
-        dotwLabel.text = dowt.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]
+        dotwLabel.text = dotw.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]
     }
 
-    var hideLabels = true
-    @IBAction func openMenu(_ sender: UIButton) {
-        if hideLabels{
-            dateLabel.isHidden = true
-            timeLabel.isHidden = true
-            dotwLabel.isHidden = true
-            hideLabels = false
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        timeLabel.isHidden = true
+        dotwLabel.isHidden = true
+        dateLabel.isHidden = true
+    }
+    
+    @IBAction func unwindToMainVC(segue: UIStoryboardSegue){
+        timeLabel.isHidden = false
+        dotwLabel.isHidden = false
+        dateLabel.isHidden = false
     }
 }
 

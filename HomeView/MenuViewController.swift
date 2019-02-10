@@ -17,11 +17,13 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var musicButton: UIButton!
     @IBOutlet weak var timeButton: UIButton!
     
+    var color: UIColor?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.timeButton.layer.cornerRadius = self.timeButton.frame.height / 2.0
-        self.timeButton.layer.borderColor = UIColor.red.cgColor
+        self.timeButton.layer.cornerRadius = self.timeButton.frame.height / 2
         
         self.weatherButton.layer.cornerRadius = 20
         self.calendarButton.layer.cornerRadius = 20
@@ -32,9 +34,15 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func GoBack(_ sender: UIButton) {
-        dismiss(animated: true)
-        
+        performSegue(withIdentifier: "unwindToSegueMainVC", sender: self)
     }
+
+    @IBAction func blankPress(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended{
+            performSegue(withIdentifier: "unwindToSegueMainVC", sender: self)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

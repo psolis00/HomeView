@@ -20,6 +20,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2847" translatesAutoresizingMaskIntoConstraints="NO" id="lsa-Za-Rrh">
                                 <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of the Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOX-8s-J9D">
                                 <rect key="frame" x="100" y="642" width="226.5" height="36"/>
@@ -39,17 +40,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jek-8T-p0W">
-                                <rect key="frame" x="968" y="264" width="46" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="openMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mij-CJ-BYp"/>
-                                    <segue destination="MRT-Sa-zNZ" kind="presentation" modalTransitionStyle="crossDissolve" id="0JR-R8-s8B"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="lsa-Za-Rrh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7ko-LA-EjJ"/>
                             <constraint firstAttribute="bottom" secondItem="lsa-Za-Rrh" secondAttribute="bottom" id="DRX-Ff-SDp"/>
@@ -63,6 +56,9 @@
                             <constraint firstItem="gL8-W5-oMA" firstAttribute="top" secondItem="gOX-8s-J9D" secondAttribute="bottom" id="zuk-HQ-Toh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hGr-db-uR1" appends="YES" id="wxu-Nq-XGL"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="gL8-W5-oMA" id="PNE-CJ-5cn"/>
@@ -71,20 +67,25 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="hGr-db-uR1">
+                    <connections>
+                        <segue destination="MRT-Sa-zNZ" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="jsR-Es-7xg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-133.16582914572865" y="158.99280575539569"/>
+            <point key="canvasLocation" x="-114" y="159"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--menu-->
         <scene sceneID="PtE-e4-Re9">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="MRT-Sa-zNZ" customClass="MenuViewController" customModule="HomeView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menu" title="menu" modalPresentationStyle="overCurrentContext" id="MRT-Sa-zNZ" customClass="MenuViewController" customModule="HomeView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pFg-px-ZOH">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTA-2m-h13">
-                                <rect key="frame" x="631" y="78" width="437" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="627" y="80" width="440" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.66788150089999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
                                 <state key="normal" title="Home">
@@ -92,8 +93,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXF-jf-71S">
-                                <rect key="frame" x="127" y="449" width="440" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="127" y="447" width="440" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.1043915102" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
                                 <state key="normal" title="Calendar">
@@ -101,8 +102,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBn-l3-aLM">
-                                <rect key="frame" x="631" y="449" width="437" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="627" y="447" width="440" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
                                 <state key="normal" title="Music">
@@ -110,8 +111,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0K1-UR-c9j">
-                                <rect key="frame" x="127" y="78" width="440" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="127" y="80" width="440" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
                                 <state key="normal" title="Weather">
@@ -120,7 +121,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3X-dH-ziS">
                                 <rect key="frame" x="497" y="317" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
                                 <state key="normal" title="Time">
@@ -131,7 +132,11 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="rgw-5F-AU2"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pi3-zS-pws" appends="YES" id="Yek-Df-cD5"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="calendarButton" destination="kXF-jf-71S" id="GMi-2S-bIX"/>
@@ -139,9 +144,17 @@
                         <outlet property="musicButton" destination="eBn-l3-aLM" id="gZJ-Eg-Irm"/>
                         <outlet property="timeButton" destination="h3X-dH-ziS" id="g12-mt-JCi"/>
                         <outlet property="weatherButton" destination="0K1-UR-c9j" id="XYW-hO-Pv9"/>
+                        <segue destination="ejy-S1-7wU" kind="unwind" identifier="unwindToSegueMainVC" unwindAction="unwindToMainVCWithSegue:" id="Zui-Ii-6eq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A41-ey-rJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ejy-S1-7wU" userLabel="Exit" sceneMemberID="exit"/>
+                <customObject id="JYU-vc-M30"/>
+                <tapGestureRecognizer id="pi3-zS-pws">
+                    <connections>
+                        <action selector="blankPress:" destination="MRT-Sa-zNZ" id="nG2-dN-xlN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="612.56281407035181" y="158.99280575539569"/>
         </scene>

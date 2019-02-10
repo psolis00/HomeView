@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD357D95220264EF00C8AD68 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD357D94220264EF00C8AD68 /* MenuViewController.swift */; };
+		CDA17045220E5D1600D10EEE /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA17044220E5D1600D10EEE /* Empty.xib */; };
 		CDDAF56B21EFE91100026D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAF56A21EFE91100026D89 /* AppDelegate.swift */; };
 		CDDAF56D21EFE91100026D89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAF56C21EFE91100026D89 /* ViewController.swift */; };
 		CDDAF57021EFE91100026D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDDAF56E21EFE91100026D89 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		CD357D94220264EF00C8AD68 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CDA17044220E5D1600D10EEE /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		CDDAF56721EFE91100026D89 /* HomeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAF56A21EFE91100026D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDDAF56C21EFE91100026D89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		CDDAF55E21EFE91100026D89 = {
 			isa = PBXGroup;
 			children = (
+				CDA17044220E5D1600D10EEE /* Empty.xib */,
 				CDDAF56921EFE91100026D89 /* HomeView */,
 				CDDAF57E21EFE91300026D89 /* HomeViewTests */,
 				CDDAF58921EFE91400026D89 /* HomeViewUITests */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDAF57521EFE91300026D89 /* LaunchScreen.storyboard in Resources */,
+				CDA17045220E5D1600D10EEE /* Empty.xib in Resources */,
 				CDDAF57221EFE91300026D89 /* Assets.xcassets in Resources */,
 				CDDAF57021EFE91100026D89 /* Main.storyboard in Resources */,
 			);
